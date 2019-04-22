@@ -1,0 +1,13 @@
+@import './vars';
+
+body{
+    color: $color;
+    background: $bg;
+}
+
+li.selected{
+    background: #333;
+    padding: 10px;
+    color: #FFF;
+}
+
