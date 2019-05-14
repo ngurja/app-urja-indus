@@ -10,11 +10,11 @@ const routes: Routes = [
         children: [
             {
                 path: '',
-                redirectTo: 'layout'
+                redirectTo: 'home'
             },
             {
-                path: 'layout',
-                loadChildren: './layout/layout.module#LayoutModule'
+                path: 'home',
+                loadChildren: './home/home.module#HomeModule'
             }
         ]
     }
