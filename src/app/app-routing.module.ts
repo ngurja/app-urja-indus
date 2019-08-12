@@ -5,16 +5,16 @@ import { AuthGuard } from './shared/guard/auth.guard';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: './website/website.module#WebsiteModule'
+    loadChildren: () => import('./website/website.module').then(m => m.WebsiteModule)
   },
   {
       path: '',
-      loadChildren: './admin/admin.module#AdminModule',
+      loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
       canActivate: [AuthGuard]
   },
   {
       path: 'login',
-      loadChildren: './login/login.module#LoginModule'
+      loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
   }
 ];
 
